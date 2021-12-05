@@ -44,8 +44,6 @@ let morseCodeMap = new Map(morseCodeCharsAndVals);
 let encodeMorseCode = (code) => {
   let result = [];
   let input = code.toString().split("  ");
-  /* let input = stringWithoutDoubleSpaces.toString().split(" ") */
-  console.log(input, "test");
   for (let i = 0; i < input.length; i++) {
     let subResult = [];
     let subInput = input[i].split(" ");
@@ -59,6 +57,6 @@ let encodeMorseCode = (code) => {
   return result.join(" ");
 };
 
-let input = ". -- -- .- -. ..- . .-..  -- .. --.- . -.- ..-";
+let input = ". -- -- .- -. ..- . .-..  -- .. --.- . -.- ..-"; // Should return "Emmanuel Mireku"
 console.log(encodeMorseCode(input));
-// "EMMANUEL MIREKU"
+// Returns "EMMANUEL MIREKU"
